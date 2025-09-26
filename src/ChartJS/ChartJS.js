@@ -38,7 +38,7 @@ function ChartJS() {
           },
         });
       });
-  }, []); // runs once when component mounts
+  }, []); 
 
   return <canvas ref={myChart } width="400" height="400"></canvas>;
 }

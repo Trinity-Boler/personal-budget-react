@@ -8,11 +8,8 @@ function D3JS() {
       radius = Math.min(width, height) / 2;
       d3.select("#budgetChart").selectAll("*").remove();
 
-
     const pie = d3.pie().sort(null).value((d) => d.budget);
-
     const arc = d3.arc().outerRadius(radius * 0.8).innerRadius(radius * 0.4);
-
     const outerArc = d3.arc().innerRadius(radius * 0.9).outerRadius(radius * 0.9);
 
     const svg = d3
@@ -41,7 +38,7 @@ function D3JS() {
 
     const key = (d) => d.data.title;
 
-    // ✅ Fetch JSON properly in D3 v7
+
     d3.json("http://localhost:3001/budget").then((data) => {
       change(data.myBudget);
     });
